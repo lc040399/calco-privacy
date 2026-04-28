@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palne Klima & VVS – Juridiske dokumenter</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    header {
+      background: #151a1c;
+      color: #fff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.5rem; font-weight: 600; }
+    header p { opacity: 0.7; margin-top: 6px; font-size: 0.95rem; }
+    nav {
+      background: #1e2527;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 0.9rem;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      border-bottom-color: #e87722;
+    }
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 40px 48px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    h2 { font-size: 1.6rem; margin-bottom: 8px; color: #151a1c; }
+    .updated { font-size: 0.85rem; color: #888; margin-bottom: 32px; }
+    h3 { font-size: 1.1rem; margin: 28px 0 10px; color: #151a1c; }
+    p { margin-bottom: 14px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f0f0f0;
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid #e0e0e0;
+    }
+    td { padding: 9px 12px; border: 1px solid #e0e0e0; }
+    tr:nth-child(even) td { background: #fafafa; }
+    ul { padding-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; }
+    a { color: #e87722; }
+    footer {
+      text-align: center;
+      padding: 32px 16px;
+      color: #999;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 600px) {
+      main { margin: 16px; padding: 24px 20px; }
+      nav a { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Palne Klima &amp; VVS</h1>
+    <p>Juridiske dokumenter for tilbudsapp'en</p>
+  </header>
+  <nav>
+    <a href="index.html" class="active">Privatlivspolitik</a>
+    <a href="terms.html">Vilkår for brug</a>
+  </nav>
+  <main>
+    <h2>Privatlivspolitik</h2>
+    <p class="updated">Senest opdateret: 27. april 2026</p>
+
+    <p>Denne privatlivspolitik beskriver, hvordan Palne Klima &amp; VVS ApS ("Palne", "vi", "os") behandler personoplysninger i forbindelse med din brug af tilbudsapp'en "Palne Klima &amp; VVS" ("appen").</p>
+
+    <h3>Dataansvarlig</h3>
+    <p>
+      Palne Klima &amp; VVS ApS<br>
+      CVR: 45909956<br>
+      Paradisæblevej 4, 2500 Valby<br>
+      Email: <a href="mailto:alexander@palnevvs.dk">alexander@palnevvs.dk</a>
+    </p>
+
+    <h3>Hvilke oplysninger vi behandler</h3>
+    <p>Når du bruger appen som montør eller administrator, behandler vi følgende:</p>
+
+    <p><strong>Login og brugerprofil</strong></p>
+    <ul>
+      <li>Email-adresse og navn (oprettet og administreret af Palne)</li>
+      <li>Krypteret session-token (JWT) gemt lokalt på din enhed</li>
+    </ul>
+
+    <p><strong>Indhold du opretter i appen</strong></p>
+    <ul>
+      <li>Tekstbeskrivelser af opgaver (skrevet eller dikteret)</li>
+      <li>Fotos af opgaver taget med kameraet eller valgt fra galleriet</li>
+      <li>Kundedata du opretter eller vælger (navn, adresse, telefon, email, CVR)</li>
+      <li>Tilbud genereret på baggrund af ovenstående</li>
+    </ul>
+
+    <p><strong>Teknisk information</strong></p>
+    <ul>
+      <li>Standard request-logging på vores proxy-server (IP-adresse, tidspunkt, endpoint)</li>
+      <li>Fejl- og crashinformation når noget går galt</li>
+    </ul>
+
+    <p>Vi opretter ikke en central brugerdatabase. Brugere er manuelt vedligeholdt af Palne på vores backend-konfiguration.</p>
+
+    <h3>Hvad vi bruger oplysningerne til</h3>
+    <ul>
+      <li>Generere tilbudsudkast med kunstig intelligens (Anthropic Claude)</li>
+      <li>Slå CVR-numre op i det danske CVR-register</li>
+      <li>Oprette kunder og tilbud i Palne's økonomisystem (Apacta)</li>
+      <li>Sende billeder vedhæftet tilbud til Apacta</li>
+      <li>Verificere at du er en autoriseret bruger af appen</li>
+    </ul>
+
+    <h3>Tredjeparter vi deler data med</h3>
+    <table>
+      <tr><th>Modtager</th><th>Formål</th><th>Lokation</th><th>Datatype</th></tr>
+      <tr><td>Apacta ApS</td><td>Tilbuds- og kundeadministration</td><td>EU</td><td>Kunde- og tilbudsdata, billeder</td></tr>
+      <tr><td>Anthropic PBC</td><td>AI-genererede tilbudsudkast</td><td>USA</td><td>Opgavebeskrivelser, billeder, produktinfo</td></tr>
+      <tr><td>CVRapi.dk</td><td>Opslag i CVR-registret</td><td>EU</td><td>Kun det indtastede CVR-nummer</td></tr>
+      <tr><td>Render Services Inc.</td><td>Hosting af proxy-server</td><td>EU eller USA</td><td>Standard request-logs</td></tr>
+    </table>
+    <p>Alle disse parter er underlagt deres egne privatlivspolitikker. Anthropic gemmer ikke API-input til træningsformål.</p>
+
+    <h3>Stemmegenkendelse</h3>
+    <p>Hvis du bruger mikrofon-funktionen, transskriberes tale til tekst lokalt på din enhed via Apple's eller Android's indbyggede tale-til-tekst-tjeneste. Lyden gemmes ikke og sendes ikke til Palne's servere. Den transskriberede tekst sendes som en del af tilbudsbeskrivelsen til Anthropic.</p>
+
+    <h3>Opbevaring</h3>
+    <ul>
+      <li><strong>På din enhed:</strong> Login-token og brugerprofil (kan slettes ved at logge ud eller afinstallere appen)</li>
+      <li><strong>På Palne's proxy:</strong> Ingen vedvarende lagring – kun midlertidige caches i hukommelsen</li>
+      <li><strong>Hos Apacta:</strong> Kundeoplysninger og tilbud opbevares i henhold til Apacta's privatlivspolitik og bogføringsloven (5 år for økonomiske bilag)</li>
+      <li><strong>Hos Anthropic:</strong> Inputs og outputs gemmes typisk i op til 30 dage og bruges ikke til træning</li>
+    </ul>
+
+    <h3>Dine rettigheder</h3>
+    <p>I henhold til GDPR har du ret til indsigt, berigtigelse, sletning, begrænsning, indsigelse og dataportabilitet. Kontakt <a href="mailto:alexander@palnevvs.dk">alexander@palnevvs.dk</a> eller brug "Slet min konto"-knappen i appen under indstillinger.</p>
+
+    <h3>Sletning af konto</h3>
+    <p>Du kan til enhver tid anmode om sletning af din brugerkonto via "Slet min konto" i appens indstillinger. Palne fjerner din login fra systemet inden for 30 dage.</p>
+
+    <h3>Klage</h3>
+    <p>Hvis du mener, vi behandler dine oplysninger ulovligt, kan du klage til <a href="https://datatilsynet.dk" target="_blank">Datatilsynet</a>.</p>
+
+    <h3>Ændringer</h3>
+    <p>Vi kan opdatere denne politik. Større ændringer varsles via appen eller email. Den seneste version ligger altid på denne side.</p>
+
+    <h3>Kontakt</h3>
+    <p>Spørgsmål? Skriv til <a href="mailto:alexander@palnevvs.dk">alexander@palnevvs.dk</a>.</p>
+  </main>
+  <footer>
+    &copy; 2026 Palne Klima &amp; VVS ApS &middot; CVR: 45909956
+  </footer>
+</body>
+</html>
