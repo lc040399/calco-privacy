@@ -107,7 +107,7 @@
 
     <p><strong>Login og brugerprofil</strong></p>
     <ul>
-      <li>Email-adresse og navn (oprettet og administreret af Palne)</li>
+      <li>Email-adresse og navn (oprettet og administreret af Palne i Supabase Auth)</li>
       <li>Krypteret session-token (JWT) gemt lokalt på din enhed</li>
     </ul>
 
@@ -121,28 +121,30 @@
 
     <p><strong>Teknisk information</strong></p>
     <ul>
-      <li>Standard request-logging på vores proxy-server (IP-adresse, tidspunkt, endpoint)</li>
-      <li>Fejl- og crashinformation når noget går galt</li>
+      <li>Standard request-logging på vores Supabase Edge Functions (IP-adresse, tidspunkt, endpoint)</li>
+      <li>Fejl- og crashinformation når noget går galt (sendt til Sentry, koblet til din bruger-ID)</li>
     </ul>
 
-    <p>Vi opretter ikke en central brugerdatabase. Brugere er manuelt vedligeholdt af Palne på vores backend-konfiguration.</p>
+    <p>Brugere er manuelt vedligeholdt af Palne i Supabase Auth-dashboardet.</p>
 
     <h3>Hvad vi bruger oplysningerne til</h3>
     <ul>
+      <li>Verificere at du er en autoriseret bruger af appen (Supabase Auth)</li>
       <li>Generere tilbudsudkast med kunstig intelligens (Anthropic Claude)</li>
       <li>Slå CVR-numre op i det danske CVR-register</li>
       <li>Oprette kunder og tilbud i Palne's økonomisystem (Apacta)</li>
       <li>Sende billeder vedhæftet tilbud til Apacta</li>
-      <li>Verificere at du er en autoriseret bruger af appen</li>
+      <li>Modtage crash- og fejlrapporter for at fejlsøge appen (Sentry)</li>
     </ul>
 
     <h3>Tredjeparter vi deler data med</h3>
     <table>
       <tr><th>Modtager</th><th>Formål</th><th>Lokation</th><th>Datatype</th></tr>
+      <tr><td>Supabase Inc.</td><td>Hosting af backend (auth, database, edge functions, storage)</td><td>EU (Frankfurt)</td><td>Bruger-profil, request-logs, slet-anmodninger</td></tr>
       <tr><td>Apacta ApS</td><td>Tilbuds- og kundeadministration</td><td>EU</td><td>Kunde- og tilbudsdata, billeder</td></tr>
       <tr><td>Anthropic PBC</td><td>AI-genererede tilbudsudkast</td><td>USA</td><td>Opgavebeskrivelser, billeder, produktinfo</td></tr>
       <tr><td>CVRapi.dk</td><td>Opslag i CVR-registret</td><td>EU</td><td>Kun det indtastede CVR-nummer</td></tr>
-      <tr><td>Render Services Inc.</td><td>Hosting af proxy-server</td><td>EU eller USA</td><td>Standard request-logs</td></tr>
+      <tr><td>Sentry (Functional Software Inc.)</td><td>Crash- og fejlrapportering</td><td>USA/EU afhængig af projekt</td><td>Crash-stacks, bruger-ID, enheds- og OS-info</td></tr>
     </table>
     <p>Alle disse parter er underlagt deres egne privatlivspolitikker. Anthropic gemmer ikke API-input til træningsformål.</p>
 
@@ -152,9 +154,10 @@
     <h3>Opbevaring</h3>
     <ul>
       <li><strong>På din enhed:</strong> Login-token og brugerprofil (kan slettes ved at logge ud eller afinstallere appen)</li>
-      <li><strong>På Palne's proxy:</strong> Ingen vedvarende lagring – kun midlertidige caches i hukommelsen</li>
+      <li><strong>Hos Supabase (Frankfurt):</strong> Bruger-profil i Supabase Auth, slet-konto-anmodninger. Kunde- og tilbudsdata gemmes ikke i Supabase — de går direkte til Apacta.</li>
       <li><strong>Hos Apacta:</strong> Kundeoplysninger og tilbud opbevares i henhold til Apacta's privatlivspolitik og bogføringsloven (5 år for økonomiske bilag)</li>
       <li><strong>Hos Anthropic:</strong> Inputs og outputs gemmes typisk i op til 30 dage og bruges ikke til træning</li>
+      <li><strong>Hos Sentry:</strong> Crash- og fejl-events i op til 90 dage</li>
     </ul>
 
     <h3>Dine rettigheder</h3>
